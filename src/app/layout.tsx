@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header  from "@/app/components/Header";
+import Footer  from "@/app/components/Footer";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const financier = localFont({
-  src: "../../public/font/FinancierDisplay-Semibold.woff2",
-  variable: "--font-serif",
-  weight: "600",
-});
 
 export const metadata: Metadata = {
   title: "Multiplier Holdings | The Operating System for Professional Services",
@@ -29,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${financier.variable} antialiased font-sans`}
+        className={`antialiased font-sans`}
       >
         <Header />
         {children}

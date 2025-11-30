@@ -3,6 +3,7 @@
 import { ArrowRight, TrendingUp } from 'lucide-react';
 import { Guilloche } from '@/components/guilloche/Guilloche';
 import FadeIn from '@/components/animations/FadeIn';
+import { Button } from '@/components/ui/button';
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="philosophy" className="relative min-h-screen flex items-center justify-center bg-forest overflow-hidden pt-20">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-forest overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <Guilloche className="text-gold" type="wave" opacity={0.2} />
@@ -51,19 +52,22 @@ export default function Home() {
 
           <FadeIn delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button 
+              <Button
                 onClick={() => scrollToSection('network')}
-                className="group relative px-8 py-4 bg-gold text-forest hover:bg-white transition-all duration-300 w-full sm:w-auto shadow-[0_0_20px_rgba(238,216,158,0.3)]"
+                className="group h-auto px-8 py-4 bg-gold text-forest hover:bg-white transition-all duration-300 w-full sm:w-auto shadow-[0_0_20px_rgba(238,216,158,0.3)] rounded-none"
               >
-                <span className="relative z-10 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                   View Portfolio <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
-              <button className="px-8 py-4 border border-gold/30 text-gold hover:border-gold hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto">
+              </Button>
+              <Button
+                variant="outline"
+                className="h-auto px-8 py-4 border border-gold/30 bg-transparent text-gold hover:border-gold hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto rounded-none shadow-none"
+              >
                 <span className="text-xs font-bold uppercase tracking-widest">
                   Our Thesis
                 </span>
-              </button>
+              </Button>
             </div>
           </FadeIn>
         </div>

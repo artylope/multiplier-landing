@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-forest overflow-hidden">
+      <section id="hero" className="relative flex items-center justify-center bg-forest overflow-hidden py-24">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <Guilloche className="text-gold" type="wave" opacity={0.2} />
@@ -44,7 +44,7 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={600}>
-            <p className="font-sans font-light leading-relaxed text-balance md:text-lg text-cream/70 max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="font-sans font-light leading-relaxed text-balance md:text-lg text-cream/70 max-w-2xl mx-auto mb-12">
               We are the operating system for the next generation of professional services. 
               Unifying high-trust boutique firms with world-class AI infrastructure to scale the summit of value.
             </p>
@@ -62,7 +62,7 @@ export default function Home() {
               </Button>
               <Button
                 variant="outline"
-                className="h-auto px-8 py-4 border border-gold/30 bg-transparent text-gold hover:border-gold hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto rounded-none shadow-none"
+                className="h-auto px-8 py-4 border border-gold/30 bg-transparent text-gold hover:border-gold hover:bg-gold/50  transition-all duration-300 w-full sm:w-auto rounded-none shadow-none"
               >
                 <span className="text-xs font-bold uppercase tracking-widest">
                   Our Thesis

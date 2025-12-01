@@ -15,7 +15,7 @@ function Section({
   className?: string;
 }) {
   return (
-    <section className={`py-24 px-6 ${className}`}>
+    <section className={`py-24 px-4 ${className}`}>
       <div className="max-w-7xl mx-auto">{children}</div>
     </section>
   );
@@ -68,7 +68,7 @@ export default function Careers() {
 
       {/* Work Style */}
       <Section className="bg-white text-forest">
-        <div className="container mx-auto grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16">
           <div className="w-full max-w-xl ">
             <h2 className="font-serif text-4xl md:text-5xl mb-6 tracking-tight">Work Style</h2>
             <p className="text-lg text-forest/70 leading-relaxed mb-6">

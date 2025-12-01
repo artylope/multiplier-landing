@@ -28,27 +28,25 @@ export default function Hero({
   ],
 }: HeroProps) {
   return (
-    <section className="py-24 px-6 bg-forest text-cream min-h-[60vh] relative overflow-hidden">
+    <section className="py-24 px-4 bg-forest text-cream min-h-[60vh] relative overflow-hidden">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <Guilloche type="wave" color="#EED89E" />
       </div>
       <FadeIn>
-        <div className="container mx-auto">
-          <div className="max-w-7xl mx-auto">
-            <div className="w-full flex flex-col items-start justify-start">
-              <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tighter tracking-tighter">
-                {title}
-              </h1>
-              <p className="md:text-lg text-cream/70 leading-relaxed mb-12 max-w-2xl">
-                {subtitle}
-              </p>
-              <div className="w-full flex flex-col md:flex-row gap-8 text-sm font-mono text-gold/80 border-t border-gold/20 pt-8">
-                {features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    {feature.icon} {feature.label}
-                  </div>
-                ))}
-              </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="w-full flex flex-col items-start justify-start">
+            <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tighter tracking-tighter">
+              {title}
+            </h1>
+            <p className="md:text-lg text-cream/70 leading-relaxed mb-12 max-w-2xl">
+              {subtitle}
+            </p>
+            <div className="w-full flex flex-col md:flex-row gap-8 text-sm font-mono text-gold/80 border-t border-gold/20 pt-8">
+              {features.map((feature, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  {feature.icon} {feature.label}
+                </div>
+              ))}
             </div>
           </div>
         </div>

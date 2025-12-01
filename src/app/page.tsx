@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="hero" className="relative flex items-center justify-center bg-forest overflow-hidden py-24">
+      <section id="hero" className="relative flex items-center justify-center bg-forest overflow-hidden py-24 px-4">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <Guilloche className="text-gold" type="wave" opacity={0.2} />
@@ -24,10 +24,10 @@ export default function Home() {
             <Guilloche className="text-gold" type="wave" opacity={0.15} />
           </div>
         </div>
-        
+
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-forest/80 to-forest"></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
           <FadeIn delay={200}>
             <div className="inline-flex items-center mb-8 px-5 py-2.5 border border-white/10 rounded-full bg-white/5 backdrop-blur-md shadow-lg">
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold/90 flex items-center gap-2.5">

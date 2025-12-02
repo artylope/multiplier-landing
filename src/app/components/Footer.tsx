@@ -43,7 +43,7 @@ export default function Footer() {
         type="wave"
       />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 mb-24">
           <div
             className="transition-all duration-1000 ease-out"

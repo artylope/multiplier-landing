@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { MultiplierLogo } from "./MultiplierLogo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,20 +21,14 @@ export default function Header() {
 
   return (
     <header className="bg-forest border-b border-white/10 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Wordmark */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 flex items-center justify-center">
-               {/* Logo Mark - simplified to match style */}
-              <div className="relative w-8 h-8">
-                 <div className="absolute inset-0 border border-gold transform rotate-45" />
-                 <div className="absolute inset-2 border border-gold/50" />
-              </div>
-            </div>
-            <span className="text-xl font-serif tracking-widest text-cream group-hover:text-white transition-colors uppercase">
-              Multiplier
-            </span>
+          <Link href="/" className="group flex items-center gap-0">
+            <MultiplierLogo
+              variant="icon"
+              className="text-cream group-hover:text-white transition-colors h-5 -ml-10"
+            />
           </Link>
 
           {/* Desktop Navigation */}

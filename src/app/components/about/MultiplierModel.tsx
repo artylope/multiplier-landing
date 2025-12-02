@@ -8,12 +8,13 @@ export default function MultiplierModel() {
     <section className="py-24 px-4 bg-forest/5 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <span className="text-forest/60 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
+            Structure
+          </span>
           <h2 className="font-serif text-5xl md:text-6xl tracking-tighter text-forest">
             The Multiplier Model
           </h2>
-          <p className="text-forest/60 mt-4">
-            Three distinct engines driving our growth
-          </p>
+          
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

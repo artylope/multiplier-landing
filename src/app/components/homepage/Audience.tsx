@@ -32,12 +32,12 @@ export default function Audience() {
               {[
                 {
                   type: AudienceType.CLIENT,
-                  label: "For Executives",
-                  desc: "Enterprise Solutions",
+                  label: "For Clients",
+                  desc: "High Quality Service",
                 },
                 {
                   type: AudienceType.TARGET,
-                  label: "For Founders",
+                  label: "For Owners",
                   desc: "Succession & Growth",
                 },
                 {

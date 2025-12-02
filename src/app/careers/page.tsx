@@ -21,6 +21,23 @@ function Section({
 }
 
 export default function Careers() {
+  const openPositions = [
+    {
+      title: "Product Engineer, Corporate Accounting Pod",
+      location: "Remote (Cantonese speaking)",
+      type: "Full-time",
+      team: "Engineering",
+      link: "https://www.notion.so/multiplierholdings/JD-Product-Engineer-Corporate-Accounting-Pod-Cantonese-speaking-2b63d1dd922e8094aa6fc1486613ed91",
+    },
+    {
+      title: "Strategic Finance Associate",
+      location: "Remote",
+      type: "Full-time",
+      team: "Finance",
+      link: "https://www.notion.so/multiplierholdings/JD-Strategic-Finance-Associate-2a83d1dd922e802193fdf0d1792f60e1",
+    },
+  ];
+
   const employees = [
     {
       name: "Sze Wai",
@@ -107,6 +124,133 @@ export default function Careers() {
         </div>
       </Section>
 
+      {/* Open Positions */}
+      <Section className="bg-cream/30">
+        <div className="text-center mb-16">
+          <span className="text-forest/60 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
+            Opportunities
+          </span>
+          <h2 className="font-serif text-5xl md:text-6xl tracking-tighter text-forest">
+            Open Positions
+          </h2>
+        </div>
+
+        <div className="max-w-4xl mx-auto space-y-4">
+          {openPositions.map((position, i) => (
+            <FadeIn key={i} delay={i * 100}>
+              <a
+                href={position.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-8 bg-white border border-forest/10 hover:border-gold/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center justify-between gap-8">
+                  <div className="flex-1">
+                    <h3 className="font-serif text-2xl text-forest group-hover:text-dark-gold transition-colors mb-3">
+                      {position.title}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-4 text-sm">
+                      <span className="flex items-center gap-2 text-forest/60">
+                        <div className="w-1 h-1 bg-gold rotate-45"></div>
+                        {position.team}
+                      </span>
+                      <span className="flex items-center gap-2 text-forest/60">
+                        <div className="w-1 h-1 bg-gold rotate-45"></div>
+                        {position.location}
+                      </span>
+                      <span className="flex items-center gap-2 text-forest/60">
+                        <div className="w-1 h-1 bg-gold rotate-45"></div>
+                        {position.type}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-forest/60 group-hover:text-dark-gold transition-colors">
+                    <span className="text-xs font-bold uppercase tracking-wider">
+                      View Details
+                    </span>
+                    <svg
+                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+
+        {openPositions.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-forest/60 text-lg">
+              No open positions at the moment. Check back soon!
+            </p>
+          </div>
+        )}
+      </Section>
+
+      {/* Team Photos Gallery */}
+      <Section className="bg-forest/20 py-20">
+        <div className="text-center mb-12">
+          <span className="text-forest/50 text-[10px] font-bold uppercase tracking-[0.3em] mb-6 block">
+            Life at Multiplier
+          </span>
+          <h2 className="font-serif text-5xl md:text-6xl tracking-tight text-forest mb-4 leading-[1.1]">
+            Moments Together
+          </h2>
+          <p className="text-forest/60 text-lg max-w-2xl mx-auto">
+            From team retreats to daily collaborations, see what makes our culture special
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+            {[1, 2, 3, 4, 5].map((_, i) => (
+              <div
+                key={i}
+                className="flex-none w-80 h-80 bg-white rounded-xl p-3 shadow-sm border border-forest/10 snap-center transform hover:scale-[1.02] hover:shadow-lg hover:border-gold/30 transition-all duration-300"
+              >
+                <div className="w-full h-full bg-cream/50 rounded-lg flex items-center justify-center border border-forest/5">
+                  <div className="text-center text-forest/30">
+                    <svg
+                      className="w-16 h-16 mx-auto mb-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <p className="text-sm font-medium">Photo {i + 1}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <style jsx>{`
+          .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+      </Section>
 
       {/* Employee Voices */}
       <Section className="bg-white">

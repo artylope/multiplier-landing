@@ -10,6 +10,7 @@ const teamMembers = [
     role: "CEO",
     bio: "Leading Multiplier's vision to transform professional services through AI and operational excellence.",
     linkedin: "#",
+    image: "/team/np.png",
   },
   {
     name: "Argyris Zymnis",

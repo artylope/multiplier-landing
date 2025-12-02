@@ -2,6 +2,7 @@
 
 import FadeIn from "@/components/animations/FadeIn";
 import { Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -15,6 +16,7 @@ const teamMembers = [
     role: "CTO",
     bio: "Building the technical infrastructure powering the next generation of professional services.",
     linkedin: "#",
+    image: "/team/az.png",
   },
   {
     name: "Frederik Voet",
@@ -73,10 +75,20 @@ export default function Team() {
               <div className="group">
                 {/* Avatar Circle */}
                 <div className="mb-6 relative">
-                  <div className="w-32 h-32 mx-auto bg-forest/5 rounded-full flex items-center justify-center border-2 border-forest/10 group-hover:border-gold transition-colors">
-                    <span className="font-serif text-4xl text-forest">
-                      {member.name.charAt(0)}
-                    </span>
+                  <div className="w-48 h-48 mx-auto flex items-center justify-center transition-colors">
+                    {'image' in member && member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={192}
+                        height={192}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <span className="font-serif text-5xl text-forest">
+                        {member.name.charAt(0)}
+                      </span>
+                    )}
                   </div>
                 </div>
 

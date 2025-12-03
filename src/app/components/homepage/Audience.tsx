@@ -20,11 +20,11 @@ export default function Audience() {
         <Guilloche className="opacity-10" type="wave" color="#122C18" />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <FadeIn>
           <div className="flex flex-col md:flex-row gap-12 md:gap-24 relative z-10">
             {/* Sidebar / Tabs */}
-            <div className="md:w-1/3 flex flex-col gap-2 sticky top-32 h-fit">
+            <div className="md:w-1/3 flex flex-col gap-2 md:sticky md:top-32 md:h-fit">
               <h3 className="font-serif text-2xl md:text-3xl text-forest mb-8 tracking-tight leading-none">
                 Tailored<br />Perspectives
               </h3>

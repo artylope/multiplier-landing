@@ -12,7 +12,7 @@ function Section({
 }) {
   return (
     <section className={`py-24 px-4 ${className}`}>
-      <div className="max-w-7xl mx-auto">{children}</div>
+      <div className="max-w-7xl mx-auto px-4">{children}</div>
     </section>
   );
 }

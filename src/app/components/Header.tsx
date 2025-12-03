@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="bg-forest border-b border-white/10 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Wordmark */}
           <Link href="/" className="group flex items-center gap-0">

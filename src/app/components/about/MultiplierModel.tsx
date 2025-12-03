@@ -6,7 +6,7 @@ import FadeIn from "@/components/animations/FadeIn";
 export default function MultiplierModel() {
   return (
     <section className="py-24 px-4 bg-forest/5 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-forest/60 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
             Structure

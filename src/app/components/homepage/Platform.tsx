@@ -28,7 +28,7 @@ export default function Platform() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
           <FadeIn>
             <span className="text-dark-gold text-xs font-bold uppercase tracking-[0.2em] mb-4 block">

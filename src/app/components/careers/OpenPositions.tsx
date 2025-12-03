@@ -11,7 +11,7 @@ function Section({
 }) {
   return (
     <section className={`py-24 px-4 ${className}`}>
-      <div className="max-w-7xl mx-auto">{children}</div>
+      <div className="max-w-7xl mx-auto px-4">{children}</div>
     </section>
   );
 }
@@ -30,6 +30,13 @@ const openPositions = [
     type: "Full-time",
     team: "Finance",
     link: "https://www.notion.so/multiplierholdings/JD-Strategic-Finance-Associate-2a83d1dd922e802193fdf0d1792f60e1",
+  },
+  {
+    title: "Technical Support Engineer, Tax Pod",
+    location: "Remote",
+    type: "Full-time",
+    team: "Engineering",
+    link: "https://www.notion.so/multiplierholdings/JD-Technical-Support-Engineer-Tax-Pod-2b73d1dd922e804f941dea43da809a34",
   },
 ];
 
@@ -52,14 +59,14 @@ export default function OpenPositions() {
               href={position.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block p-8 bg-white border border-forest/10 hover:border-gold/30 hover:shadow-lg transition-all duration-300"
+              className="group block p-6 md:p-8 bg-white border border-forest/10 hover:border-gold/30 hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-center justify-between gap-8">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
                 <div className="flex-1">
-                  <h3 className="font-serif text-2xl text-forest group-hover:text-dark-gold transition-colors mb-3">
+                  <h3 className="font-serif text-xl md:text-2xl text-forest group-hover:text-dark-gold transition-colors mb-3">
                     {position.title}
                   </h3>
-                  <div className="flex flex-wrap items-center gap-4 text-sm">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
                     <span className="flex items-center gap-2 text-forest/60">
                       <div className="w-1 h-1 bg-gold rotate-45"></div>
                       {position.team}
@@ -74,7 +81,7 @@ export default function OpenPositions() {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-forest/60 group-hover:text-dark-gold transition-colors">
+                <div className="flex items-center gap-2 text-forest/60 group-hover:text-dark-gold transition-colors pt-2 md:pt-0 border-t border-forest/5 md:border-0">
                   <span className="text-xs font-bold uppercase tracking-wider">
                     View Details
                   </span>
